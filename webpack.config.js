@@ -19,7 +19,9 @@ module.exports =
     output:
     {
         filename: 'index.js',
-        path: Path.resolve(__dirname, './')
+        path: Path.resolve(__dirname, './'),
+		libraryTarget: 'umd',
+		globalObject: 'this'
     },
     watch: true,
     module:
