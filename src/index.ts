@@ -2,3 +2,4 @@
 
 // Methods
 export { mirror } from './Mirror';
+export { createSubsetObject } from './CreateSubsetObject';

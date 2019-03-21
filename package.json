@@ -1,7 +1,7 @@
 {
 	"name": "@ChrisTalman/isomorphic-utilities",
 	"description": "Utility methods for any JavaScript environment, such as browser or Node.",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"license": "UNLICENSED",
 	"main": "index.js",
 	"private": true,

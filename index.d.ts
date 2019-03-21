@@ -6,4 +6,6 @@ declare module '@ChrisTalman/isomorphic-utilities'
     {
         [GenericKey in keyof GenericObject]: GenericKey
     };
+    /** Creates object from properties of existing object. */
+    export default function <GenericSource extends object, GenericKey extends keyof GenericSource, GenericSubset extends Pick<GenericSource, GenericKey>> (source: GenericSource, keys: Array<GenericKey>): GenericSubset;
 }
