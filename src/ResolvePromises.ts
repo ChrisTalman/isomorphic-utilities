@@ -2,19 +2,14 @@
 
 import { PromiseResolution } from '@bluecewe/types-helpers';
 
-interface Promises
+type Resolutions <GenericObject extends object> =
 {
-	[key: string]: Promise<any>;
+    [GenericKey in keyof GenericObject]: GenericObject[GenericKey] extends Promise<any> ? Resolution <GenericObject, GenericKey> : GenericObject[GenericKey];
 };
 
-type Resolutions <GenericObject extends Promises> =
-{
-    [GenericKey in keyof GenericObject]: Resolution <GenericObject, GenericKey>;
-};
+type Resolution <GenericObject extends object, GenericKey extends keyof GenericObject, GenericPromise = GenericObject[GenericKey]> = PromiseResolution<GenericPromise>;
 
-type Resolution <GenericObject extends Promises, GenericKey extends keyof GenericObject, GenericPromise = GenericObject[GenericKey]> = PromiseResolution<GenericPromise>;
-
-export async function resolvePromises <GenericObject extends Promises> (object: GenericObject)
+export async function resolvePromises <GenericObject extends object> (object: GenericObject)
 {
 	const keys = Object.keys(object);
 	const promises: Array<Promise<any>> = [];

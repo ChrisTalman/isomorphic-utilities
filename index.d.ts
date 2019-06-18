@@ -10,14 +10,10 @@ declare module '@ChrisTalman/isomorphic-utilities'
 	export function createSubsetObject <GenericSource extends object, GenericKey extends keyof GenericSource, GenericSubset extends Pick<GenericSource, GenericKey>> (source: GenericSource, keys: Array<GenericKey>): GenericSubset;
     /** Resolves promises in parallel. */
 	import { PromiseResolution } from '@bluecewe/types-helpers';
-    interface Promises
+    type Resolutions <GenericObject extends object> =
     {
-    	[key: string]: Promise<any>;
-    }
-    type Resolutions <GenericObject extends Promises> =
-    {
-        [GenericKey in keyof GenericObject]: Resolution <GenericObject, GenericKey>;
+        [GenericKey in keyof GenericObject]: GenericObject[GenericKey] extends Promise<any> ? Resolution <GenericObject, GenericKey> : GenericObject[GenericKey];
     };
-	type Resolution <GenericObject extends Promises, GenericKey extends keyof GenericObject, GenericPromise = GenericObject[GenericKey]> = PromiseResolution<GenericPromise>;
-    export function resolvePromises <GenericObject extends Promises> (object: GenericObject): Resolutions <GenericObject>;
+	type Resolution <GenericObject extends object, GenericKey extends keyof GenericObject, GenericPromise = GenericObject[GenericKey]> = PromiseResolution<GenericPromise>;
+    export function resolvePromises <GenericObject extends object> (object: GenericObject): Resolutions <GenericObject>;
 }

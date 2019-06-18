@@ -120,15 +120,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./src/ResolvePromises.ts":
+/*!********************************!*\
+  !*** ./src/ResolvePromises.ts ***!
+  \********************************/
+/*! exports provided: resolvePromises */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"resolvePromises\", function() { return resolvePromises; });\n\r\nasync function resolvePromises(object) {\r\n    const keys = Object.keys(object);\r\n    const promises = [];\r\n    const resolutions = {};\r\n    for (let key of keys) {\r\n        const promise = object[key];\r\n        const resolutionPromise = resolvePromise({ key, promise, resolutions });\r\n        promises.push(resolutionPromise);\r\n    }\r\n    ;\r\n    await Promise.all(promises);\r\n    return resolutions;\r\n}\r\n;\r\nasync function resolvePromise({ key, promise, resolutions }) {\r\n    const resolution = await promise;\r\n    resolutions[key] = resolution;\r\n}\r\n;\r\n\n\n//# sourceURL=webpack:///./src/ResolvePromises.ts?");
+
+/***/ }),
+
 /***/ "./src/index.ts":
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
-/*! exports provided: mirror, createSubsetObject */
+/*! exports provided: mirror, createSubsetObject, resolvePromises */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Mirror__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Mirror */ \"./src/Mirror.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"mirror\", function() { return _Mirror__WEBPACK_IMPORTED_MODULE_0__[\"mirror\"]; });\n\n/* harmony import */ var _CreateSubsetObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateSubsetObject */ \"./src/CreateSubsetObject.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"createSubsetObject\", function() { return _CreateSubsetObject__WEBPACK_IMPORTED_MODULE_1__[\"createSubsetObject\"]; });\n\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Mirror__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Mirror */ \"./src/Mirror.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"mirror\", function() { return _Mirror__WEBPACK_IMPORTED_MODULE_0__[\"mirror\"]; });\n\n/* harmony import */ var _CreateSubsetObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateSubsetObject */ \"./src/CreateSubsetObject.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"createSubsetObject\", function() { return _CreateSubsetObject__WEBPACK_IMPORTED_MODULE_1__[\"createSubsetObject\"]; });\n\n/* harmony import */ var _ResolvePromises__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ResolvePromises */ \"./src/ResolvePromises.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"resolvePromises\", function() { return _ResolvePromises__WEBPACK_IMPORTED_MODULE_2__[\"resolvePromises\"]; });\n\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.ts?");
 
 /***/ })
 
