@@ -16,4 +16,6 @@ declare module '@ChrisTalman/isomorphic-utilities'
     };
 	type Resolution <GenericObject extends object, GenericKey extends keyof GenericObject, GenericPromise = GenericObject[GenericKey]> = PromiseResolution<GenericPromise>;
     export function resolvePromises <GenericObject extends object> (object: GenericObject): Resolutions <GenericObject>;
+	/** Generates sort method for use in array.sort(). */
+	export function generateSort <Item> (itemCallback: (item: Item) => string | number, order?: 'ascending' | 'descending'): (alpha: Item, bravo: Item) => 1 | -1 | 0;
 }
