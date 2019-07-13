@@ -108,6 +108,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./src/GenerateSort.ts":
+/*!*****************************!*\
+  !*** ./src/GenerateSort.ts ***!
+  \*****************************/
+/*! exports provided: generateSort */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"generateSort\", function() { return generateSort; });\n\r\nfunction generateSort(itemCallback, order = 'ascending') {\r\n    const greaterThan = order === 'ascending' ? 1 : -1;\r\n    const lessThan = order === 'ascending' ? -1 : 1;\r\n    const sort = (alpha, bravo) => {\r\n        if (itemCallback(alpha) > itemCallback(bravo))\r\n            return greaterThan;\r\n        else if (itemCallback(alpha) < itemCallback(bravo))\r\n            return lessThan;\r\n        else\r\n            return 0;\r\n    };\r\n    return sort;\r\n}\r\n;\r\n\n\n//# sourceURL=webpack:///./src/GenerateSort.ts?");
+
+/***/ }),
+
 /***/ "./src/Mirror.ts":
 /*!***********************!*\
   !*** ./src/Mirror.ts ***!
@@ -136,11 +148,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
-/*! exports provided: mirror, createSubsetObject, resolvePromises */
+/*! exports provided: mirror, createSubsetObject, resolvePromises, generateSort */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Mirror__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Mirror */ \"./src/Mirror.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"mirror\", function() { return _Mirror__WEBPACK_IMPORTED_MODULE_0__[\"mirror\"]; });\n\n/* harmony import */ var _CreateSubsetObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateSubsetObject */ \"./src/CreateSubsetObject.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"createSubsetObject\", function() { return _CreateSubsetObject__WEBPACK_IMPORTED_MODULE_1__[\"createSubsetObject\"]; });\n\n/* harmony import */ var _ResolvePromises__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ResolvePromises */ \"./src/ResolvePromises.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"resolvePromises\", function() { return _ResolvePromises__WEBPACK_IMPORTED_MODULE_2__[\"resolvePromises\"]; });\n\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Mirror__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Mirror */ \"./src/Mirror.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"mirror\", function() { return _Mirror__WEBPACK_IMPORTED_MODULE_0__[\"mirror\"]; });\n\n/* harmony import */ var _CreateSubsetObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateSubsetObject */ \"./src/CreateSubsetObject.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"createSubsetObject\", function() { return _CreateSubsetObject__WEBPACK_IMPORTED_MODULE_1__[\"createSubsetObject\"]; });\n\n/* harmony import */ var _ResolvePromises__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ResolvePromises */ \"./src/ResolvePromises.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"resolvePromises\", function() { return _ResolvePromises__WEBPACK_IMPORTED_MODULE_2__[\"resolvePromises\"]; });\n\n/* harmony import */ var _GenerateSort__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./GenerateSort */ \"./src/GenerateSort.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"generateSort\", function() { return _GenerateSort__WEBPACK_IMPORTED_MODULE_3__[\"generateSort\"]; });\n\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.ts?");
 
 /***/ })
 
