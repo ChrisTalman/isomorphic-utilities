@@ -18,4 +18,6 @@ declare module '@ChrisTalman/isomorphic-utilities'
     export function resolvePromises <GenericObject extends object> (object: GenericObject): Resolutions <GenericObject>;
 	/** Generates sort method for use in array.sort(). */
 	export function generateSort <Item> (itemCallback: (item: Item) => string | number, order?: 'ascending' | 'descending'): (alpha: Item, bravo: Item) => 1 | -1 | 0;
+	/** Generates promise which resolves once given milliseconds have elapsed. */
+	export function delay(milliseconds: number): Promise<void>;
 }

@@ -1,0 +1,1 @@
+declare function setTimeout(callback: Function, milliseconds: number): any;
