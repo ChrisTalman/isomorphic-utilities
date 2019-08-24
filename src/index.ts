@@ -6,3 +6,4 @@ export { createSubsetObject } from './CreateSubsetObject';
 export { resolvePromises } from './ResolvePromises';
 export { generateSort } from './GenerateSort';
 export { delay } from './Delay';
+export { camelToDash } from './CamelToDash';

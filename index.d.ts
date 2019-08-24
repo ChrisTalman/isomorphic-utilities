@@ -20,4 +20,6 @@ declare module '@ChrisTalman/isomorphic-utilities'
 	export function generateSort <Item> (itemCallback: (item: Item) => string | number, order?: 'ascending' | 'descending'): (alpha: Item, bravo: Item) => 1 | -1 | 0;
 	/** Generates promise which resolves once given milliseconds have elapsed. */
 	export function delay(milliseconds: number): Promise<void>;
+	/** Converts camelCase to dash-case. */
+	export function camelToDash(camel: string): string;
 }

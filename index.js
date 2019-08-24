@@ -96,6 +96,18 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/CamelToDash.ts":
+/*!****************************!*\
+  !*** ./src/CamelToDash.ts ***!
+  \****************************/
+/*! exports provided: camelToDash */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"camelToDash\", function() { return camelToDash; });\n\r\nfunction camelToDash(camel) {\r\n    let dash = '';\r\n    for (let character of camel) {\r\n        if (character === character.toUpperCase()) {\r\n            dash += '-' + character.toLowerCase();\r\n        }\r\n        else {\r\n            dash += character;\r\n        }\r\n        ;\r\n    }\r\n    ;\r\n    return dash;\r\n}\r\n;\r\n\n\n//# sourceURL=webpack:///./src/CamelToDash.ts?");
+
+/***/ }),
+
 /***/ "./src/CreateSubsetObject.ts":
 /*!***********************************!*\
   !*** ./src/CreateSubsetObject.ts ***!
@@ -160,11 +172,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
-/*! exports provided: mirror, createSubsetObject, resolvePromises, generateSort, delay */
+/*! exports provided: mirror, createSubsetObject, resolvePromises, generateSort, delay, camelToDash */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Mirror__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Mirror */ \"./src/Mirror.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"mirror\", function() { return _Mirror__WEBPACK_IMPORTED_MODULE_0__[\"mirror\"]; });\n\n/* harmony import */ var _CreateSubsetObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateSubsetObject */ \"./src/CreateSubsetObject.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"createSubsetObject\", function() { return _CreateSubsetObject__WEBPACK_IMPORTED_MODULE_1__[\"createSubsetObject\"]; });\n\n/* harmony import */ var _ResolvePromises__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ResolvePromises */ \"./src/ResolvePromises.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"resolvePromises\", function() { return _ResolvePromises__WEBPACK_IMPORTED_MODULE_2__[\"resolvePromises\"]; });\n\n/* harmony import */ var _GenerateSort__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./GenerateSort */ \"./src/GenerateSort.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"generateSort\", function() { return _GenerateSort__WEBPACK_IMPORTED_MODULE_3__[\"generateSort\"]; });\n\n/* harmony import */ var _Delay__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Delay */ \"./src/Delay.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"delay\", function() { return _Delay__WEBPACK_IMPORTED_MODULE_4__[\"delay\"]; });\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Mirror__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Mirror */ \"./src/Mirror.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"mirror\", function() { return _Mirror__WEBPACK_IMPORTED_MODULE_0__[\"mirror\"]; });\n\n/* harmony import */ var _CreateSubsetObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateSubsetObject */ \"./src/CreateSubsetObject.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"createSubsetObject\", function() { return _CreateSubsetObject__WEBPACK_IMPORTED_MODULE_1__[\"createSubsetObject\"]; });\n\n/* harmony import */ var _ResolvePromises__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ResolvePromises */ \"./src/ResolvePromises.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"resolvePromises\", function() { return _ResolvePromises__WEBPACK_IMPORTED_MODULE_2__[\"resolvePromises\"]; });\n\n/* harmony import */ var _GenerateSort__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./GenerateSort */ \"./src/GenerateSort.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"generateSort\", function() { return _GenerateSort__WEBPACK_IMPORTED_MODULE_3__[\"generateSort\"]; });\n\n/* harmony import */ var _Delay__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Delay */ \"./src/Delay.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"delay\", function() { return _Delay__WEBPACK_IMPORTED_MODULE_4__[\"delay\"]; });\n\n/* harmony import */ var _CamelToDash__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CamelToDash */ \"./src/CamelToDash.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"camelToDash\", function() { return _CamelToDash__WEBPACK_IMPORTED_MODULE_5__[\"camelToDash\"]; });\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.ts?");
 
 /***/ })
 
