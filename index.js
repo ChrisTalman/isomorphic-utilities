@@ -116,7 +116,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createSubsetObject\", function() { return createSubsetObject; });\n\r\nfunction createSubsetObject(source, keys) {\r\n    const subset = {};\r\n    for (let key of keys) {\r\n        if (key in source) {\r\n            subset[key] = source[key];\r\n        }\r\n        ;\r\n    }\r\n    ;\r\n    return subset;\r\n}\r\n;\r\n\n\n//# sourceURL=webpack:///./src/CreateSubsetObject.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createSubsetObject\", function() { return createSubsetObject; });\n\r\nfunction createSubsetObject(source, keys, exclude) {\r\n    const subset = {};\r\n    if (exclude) {\r\n        for (let { 0: key, 1: value } of Object.entries(source)) {\r\n            if (keys.includes(key))\r\n                continue;\r\n            subset[key] = value;\r\n        }\r\n        ;\r\n    }\r\n    else {\r\n        for (let key of keys) {\r\n            if (key in source) {\r\n                subset[key] = source[key];\r\n            }\r\n            ;\r\n        }\r\n        ;\r\n    }\r\n    ;\r\n    return subset;\r\n}\r\n;\r\n\n\n//# sourceURL=webpack:///./src/CreateSubsetObject.ts?");
 
 /***/ }),
 
