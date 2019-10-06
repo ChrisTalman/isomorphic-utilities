@@ -1,6 +1,6 @@
 'use strict';
 
-import { PromiseResolution } from '@bluecewe/types-helpers';
+import { PromiseResolution } from '@ChrisTalman/types-helpers';
 
 type Resolutions <GenericObject extends object> =
 {

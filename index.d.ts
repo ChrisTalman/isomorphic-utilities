@@ -18,7 +18,7 @@ declare module '@ChrisTalman/isomorphic-utilities'
 	(source: GenericSource, keys: Array<GenericKey>, exclude?: GenericExclude): GenericSubset;
 
     /** Resolves promises in parallel. */
-	import { PromiseResolution } from '@bluecewe/types-helpers';
+	import { PromiseResolution } from '@ChrisTalman/types-helpers';
     type Resolutions <GenericObject extends object> =
     {
         [GenericKey in keyof GenericObject]: GenericObject[GenericKey] extends Promise<any> ? Resolution <GenericObject, GenericKey> : GenericObject[GenericKey];

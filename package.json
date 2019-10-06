@@ -15,6 +15,6 @@
 		"webpack-cli": "3.3.0"
 	},
 	"dependencies": {
-		"@bluecewe/types-helpers": "bitbucket:bluecewe/types-helpers"
+		"@ChrisTalman/types-helpers": "github:ChrisTalman/types-helpers"
 	}
 }
