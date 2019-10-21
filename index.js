@@ -152,7 +152,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"mirror\", function() { return mirror; });\n\r\nfunction mirror(object) {\r\n    const mirror = {};\r\n    const keys = Object.keys(object);\r\n    for (let key of keys) {\r\n        mirror[key] = key;\r\n    }\r\n    ;\r\n    return mirror;\r\n}\r\n;\r\n\n\n//# sourceURL=webpack:///./src/Mirror.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"mirror\", function() { return mirror; });\n\r\n;\r\nfunction mirror(object) {\r\n    const mirror = {};\r\n    const keys = Object.keys(object);\r\n    for (let key of keys) {\r\n        mirror[key] = key;\r\n    }\r\n    ;\r\n    return mirror;\r\n}\r\n;\r\n\n\n//# sourceURL=webpack:///./src/Mirror.ts?");
 
 /***/ }),
 
