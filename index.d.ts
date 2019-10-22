@@ -1,11 +1,15 @@
 declare module '@ChrisTalman/isomorphic-utilities'
 {
 	/** Generates new object with each key and value having the same value as one another. */
-	export function mirror <GenericObject extends object> (object: GenericObject): Mirror<GenericObject>;
+	export function mirror <GenericObject extends MirrorObject> (object: GenericObject): Mirror<GenericObject>;
 	export type Mirror <GenericObject> =
 	{
 		[GenericKey in keyof GenericObject]: GenericKey
 	};
+	interface MirrorObject
+	{
+		[key: string]: true;
+	}
 
 	/** Creates object from properties of existing object. */
 	export function createSubsetObject
