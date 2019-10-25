@@ -156,6 +156,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./src/PromiseController.ts":
+/*!**********************************!*\
+  !*** ./src/PromiseController.ts ***!
+  \**********************************/
+/*! exports provided: PromiseController */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"PromiseController\", function() { return PromiseController; });\n\r\nclass PromiseController {\r\n    constructor() {\r\n        this.promise = new Promise((resolve, reject) => {\r\n            this.resolve = resolve;\r\n            this.reject = reject;\r\n        });\r\n    }\r\n    ;\r\n    resolve(value) {\r\n        this._resolve(value);\r\n    }\r\n    ;\r\n    reject(reason) {\r\n        this._reject(reason);\r\n    }\r\n    ;\r\n}\r\n;\r\n\n\n//# sourceURL=webpack:///./src/PromiseController.ts?");
+
+/***/ }),
+
 /***/ "./src/ResolvePromises.ts":
 /*!********************************!*\
   !*** ./src/ResolvePromises.ts ***!
@@ -172,11 +184,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
-/*! exports provided: mirror, createSubsetObject, resolvePromises, generateSort, delay, camelToDash */
+/*! exports provided: mirror, createSubsetObject, resolvePromises, generateSort, delay, camelToDash, PromiseController */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Mirror__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Mirror */ \"./src/Mirror.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"mirror\", function() { return _Mirror__WEBPACK_IMPORTED_MODULE_0__[\"mirror\"]; });\n\n/* harmony import */ var _CreateSubsetObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateSubsetObject */ \"./src/CreateSubsetObject.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"createSubsetObject\", function() { return _CreateSubsetObject__WEBPACK_IMPORTED_MODULE_1__[\"createSubsetObject\"]; });\n\n/* harmony import */ var _ResolvePromises__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ResolvePromises */ \"./src/ResolvePromises.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"resolvePromises\", function() { return _ResolvePromises__WEBPACK_IMPORTED_MODULE_2__[\"resolvePromises\"]; });\n\n/* harmony import */ var _GenerateSort__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./GenerateSort */ \"./src/GenerateSort.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"generateSort\", function() { return _GenerateSort__WEBPACK_IMPORTED_MODULE_3__[\"generateSort\"]; });\n\n/* harmony import */ var _Delay__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Delay */ \"./src/Delay.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"delay\", function() { return _Delay__WEBPACK_IMPORTED_MODULE_4__[\"delay\"]; });\n\n/* harmony import */ var _CamelToDash__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CamelToDash */ \"./src/CamelToDash.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"camelToDash\", function() { return _CamelToDash__WEBPACK_IMPORTED_MODULE_5__[\"camelToDash\"]; });\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Mirror__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Mirror */ \"./src/Mirror.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"mirror\", function() { return _Mirror__WEBPACK_IMPORTED_MODULE_0__[\"mirror\"]; });\n\n/* harmony import */ var _CreateSubsetObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateSubsetObject */ \"./src/CreateSubsetObject.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"createSubsetObject\", function() { return _CreateSubsetObject__WEBPACK_IMPORTED_MODULE_1__[\"createSubsetObject\"]; });\n\n/* harmony import */ var _ResolvePromises__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ResolvePromises */ \"./src/ResolvePromises.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"resolvePromises\", function() { return _ResolvePromises__WEBPACK_IMPORTED_MODULE_2__[\"resolvePromises\"]; });\n\n/* harmony import */ var _GenerateSort__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./GenerateSort */ \"./src/GenerateSort.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"generateSort\", function() { return _GenerateSort__WEBPACK_IMPORTED_MODULE_3__[\"generateSort\"]; });\n\n/* harmony import */ var _Delay__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Delay */ \"./src/Delay.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"delay\", function() { return _Delay__WEBPACK_IMPORTED_MODULE_4__[\"delay\"]; });\n\n/* harmony import */ var _CamelToDash__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CamelToDash */ \"./src/CamelToDash.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"camelToDash\", function() { return _CamelToDash__WEBPACK_IMPORTED_MODULE_5__[\"camelToDash\"]; });\n\n/* harmony import */ var _PromiseController__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PromiseController */ \"./src/PromiseController.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"PromiseController\", function() { return _PromiseController__WEBPACK_IMPORTED_MODULE_6__[\"PromiseController\"]; });\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.ts?");
 
 /***/ })
 

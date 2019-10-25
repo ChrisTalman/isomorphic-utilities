@@ -7,3 +7,4 @@ export { resolvePromises } from './ResolvePromises';
 export { generateSort } from './GenerateSort';
 export { delay } from './Delay';
 export { camelToDash } from './CamelToDash';
+export { PromiseController } from './PromiseController';

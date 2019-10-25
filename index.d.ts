@@ -38,4 +38,13 @@ declare module '@ChrisTalman/isomorphic-utilities'
 
 	/** Converts camelCase to dash-case. */
 	export function camelToDash(camel: string): string;
+
+	/** Generates a `Promise` and provides an interface to access and control it. */
+	export class PromiseController <GenericResolution = any, GenericRejection = any>
+	{
+		public readonly promise: Promise <GenericResolution>;
+		constructor();
+		resolve(value: GenericResolution): void;
+		reject(reason: GenericRejection): void;
+	}
 }
