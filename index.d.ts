@@ -36,6 +36,9 @@ declare module '@ChrisTalman/isomorphic-utilities'
 	/** Generates promise which resolves once given milliseconds have elapsed. */
 	export function delay(milliseconds: number): Promise<void>;
 
+	/** Capitalises the first letter of each word. */
+	export function capitalise(text: string): string;
+
 	/** Converts camelCase to dash-case. */
 	export function camelToDash(camel: string): string;
 
