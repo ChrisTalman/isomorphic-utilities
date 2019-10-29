@@ -1,5 +1,5 @@
 {
-	"name": "@ChrisTalman/isomorphic-utilities",
+	"name": "@chris-talman/isomorphic-utilities",
 	"description": "Utility methods for any JavaScript environment, such as browser or Node.",
 	"version": "1.8.0",
 	"scripts": {
