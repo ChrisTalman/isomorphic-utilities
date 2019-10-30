@@ -36,6 +36,9 @@ declare module '@chris-talman/isomorphic-utilities'
 	/** Generates promise which resolves once given milliseconds have elapsed. */
 	export function delay(milliseconds: number): Promise<void>;
 
+	/** Returns size of Base64 string in given unit. */
+	export function base64Size({value, unit}: {value: string, unit: 'bytes' | 'kilobytes'}): number;
+
 	/** Capitalises the first letter of each word. */
 	export function capitalise(text: string): string;
 
