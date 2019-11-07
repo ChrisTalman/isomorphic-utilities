@@ -36,6 +36,13 @@ declare module '@chris-talman/isomorphic-utilities'
 	/** Generates promise which resolves once given milliseconds have elapsed. */
 	export function delay(milliseconds: number): Promise<void>;
 
+	/**
+		Awaits promise.
+		If promise resolves, returns resolved value.
+		If promise rejects, returns `undefined` and logs error.
+	*/
+	export function catchPromise <GenericResolution> (promise: Promise <GenericResolution>): Promise<GenericResolution>;
+
 	/** Returns size of Base64 string in given unit. */
 	export function base64Size({value, unit}: {value: string, unit: 'bytes' | 'kilobytes'}): number;
 

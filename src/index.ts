@@ -6,6 +6,7 @@ export { createSubsetObject } from './CreateSubsetObject';
 export { resolvePromises } from './ResolvePromises';
 export { generateSort } from './GenerateSort';
 export { delay } from './Delay';
+export { catchPromise } from './CatchPromise';
 export { base64Size } from './Base64Size';
 export { capitalise } from './Capitalise';
 export { camelToDash } from './CamelToDash';
