@@ -21,13 +21,13 @@ declare module '@chris-talman/isomorphic-utilities'
 	>
 	(source: GenericSource, keys: Array<GenericKey>, exclude?: GenericExclude): GenericSubset;
 
-    /** Resolves promises in parallel. */
-    export function resolvePromises <GenericObject extends object> (object: GenericObject): Promise<Resolutions <GenericObject>>;
+	/** Resolves promises in parallel. */
+	export function resolvePromises <GenericObject extends object> (object: GenericObject): Promise<Resolutions <GenericObject>>;
 	import { PromiseResolution } from '@ChrisTalman/types-helpers';
-    type Resolutions <GenericObject extends object> =
-    {
-        [GenericKey in keyof GenericObject]: GenericObject[GenericKey] extends Promise<any> ? Resolution <GenericObject, GenericKey> : GenericObject[GenericKey];
-    };
+	type Resolutions <GenericObject extends object> =
+	{
+		[GenericKey in keyof GenericObject]: GenericObject[GenericKey] extends Promise<any> ? Resolution <GenericObject, GenericKey> : GenericObject[GenericKey];
+	};
 	type Resolution <GenericObject extends object, GenericKey extends keyof GenericObject, GenericPromise = GenericObject[GenericKey]> = PromiseResolution<GenericPromise>;
 
 	/** Generates sort method for use in array.sort(). */
