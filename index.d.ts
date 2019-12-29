@@ -23,7 +23,7 @@ declare module '@chris-talman/isomorphic-utilities'
 
 	/** Resolves promises in parallel. */
 	export function resolvePromises <GenericObject extends object> (object: GenericObject): Promise<Resolutions <GenericObject>>;
-	import { PromiseResolution } from '@ChrisTalman/types-helpers';
+	import { PromiseResolution } from '@chris-talman/types-helpers';
 	type Resolutions <GenericObject extends object> =
 	{
 		[GenericKey in keyof GenericObject]: GenericObject[GenericKey] extends Promise<any> ? Resolution <GenericObject, GenericKey> : GenericObject[GenericKey];
@@ -60,4 +60,7 @@ declare module '@chris-talman/isomorphic-utilities'
 		resolve(value: GenericResolution): void;
 		reject(reason: GenericRejection): void;
 	}
+
+	/** Generates random integer within range. */
+	export function getRangeRandomInteger(lower: number, upper: number): number;
 }

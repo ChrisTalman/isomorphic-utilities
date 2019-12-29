@@ -11,3 +11,4 @@ export { base64Size } from './Base64Size';
 export { capitalise } from './Capitalise';
 export { camelToDash } from './CamelToDash';
 export { PromiseController } from './PromiseController';
+export { getRangeRandomInteger } from './RangeRandomInteger';
