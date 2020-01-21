@@ -49,8 +49,11 @@ declare module '@chris-talman/isomorphic-utilities'
 	/** Capitalises the first letter of each word. */
 	export function capitalise(text: string): string;
 
-	/** Converts camelCase to dash-case. */
+	/** Converts `camelCase` to `dash-case`. */
 	export function camelToDash(camel: string): string;
+
+	/** Converts `dash-case` to `camelCase`. */
+	export function dashToCamel(dash: string): string;
 
 	/** Generates a `Promise` and provides an interface to access and control it. */
 	export class PromiseController <GenericResolution = any, GenericRejection = any>
