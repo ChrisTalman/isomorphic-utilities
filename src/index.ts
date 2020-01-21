@@ -10,5 +10,6 @@ export { catchPromise } from './CatchPromise';
 export { base64Size } from './Base64Size';
 export { capitalise } from './Capitalise';
 export { camelToDash } from './CamelToDash';
+export { dashToCamel } from './DashToCamel';
 export { PromiseController } from './PromiseController';
 export { getRangeRandomInteger } from './RangeRandomInteger';

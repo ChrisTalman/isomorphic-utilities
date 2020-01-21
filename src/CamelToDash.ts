@@ -1,6 +1,6 @@
 'use strict';
 
-/** Converts camelCase to dash-case. */
+/** Converts `camelCase` to `dash-case`. */
 export function camelToDash(camel: string)
 {
 	let dash = '';
