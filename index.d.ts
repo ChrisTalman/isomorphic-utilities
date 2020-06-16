@@ -1,7 +1,7 @@
 declare module '@chris-talman/isomorphic-utilities'
 {
 	/** Generates new object with each key and value having the same value as one another. */
-	export function mirror <GenericObject extends MirrorObject> (object: GenericObject): Mirror<GenericObject>;
+	export function mirror <GenericParameter extends MirrorObject | Array <GenericKey>, GenericKey extends string> (parameter: GenericParameter): GenericParameter extends Array <GenericKey> ? { [Key in GenericParameter[0]]: Key } : Mirror <GenericParameter>;
 	export type Mirror <GenericObject> =
 	{
 		[GenericKey in keyof GenericObject]: GenericKey

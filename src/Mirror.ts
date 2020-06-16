@@ -1,23 +1,31 @@
 'use strict';
 
 // Types
-export type Mirror <GenericObject extends MirrorObject> =
-{
-    [GenericKey in keyof GenericObject]: GenericKey
-};
+import { Mirror } from '@chris-talman/types-helpers';
 interface MirrorObject
 {
 	[key: string]: true;
 };
 
 /** Generates new object with each key and value having the same value as one another. */
-export function mirror <GenericObject extends MirrorObject> (object: GenericObject)
+export function mirror <GenericParameter extends MirrorObject | Array <GenericKey>, GenericKey extends string> (parameter: GenericParameter)
 {
-    const mirror = {} as Mirror<GenericObject>;
-    const keys = Object.keys(object);
-    for (let key of keys)
-    {
-        mirror[key as keyof GenericObject] = key;
-    };
-    return mirror;
+	const mirror = {} as GenericParameter extends Array <GenericKey> ? { [Key in GenericParameter[0]]: Key } : Mirror <GenericParameter>;
+	if (parameter instanceof Array)
+	{
+		for (let value of parameter)
+		{
+			mirror[value] = parameter[value];
+		};
+	}
+	else
+	{
+		const keys = Object.keys(parameter);
+		for (let key of keys)
+		{
+			mirror[key] = key;
+		};
+		return mirror;
+	};
+	return mirror;
 };

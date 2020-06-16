@@ -1,7 +1,7 @@
 {
 	"name": "@chris-talman/isomorphic-utilities",
 	"description": "Utility methods for any JavaScript environment, such as browser or Node.",
-	"version": "1.12.1",
+	"version": "1.13.0",
 	"scripts": {
 		"build": "./node_modules/.bin/webpack"
 	},
@@ -9,7 +9,7 @@
 		"ts-loader": "5.3.3",
 		"typescript": "3.5.3",
 		"webpack": "4.29.6",
-		"webpack-cli": "3.3.0"
+		"webpack-cli": "3.3.11"
 	},
 	"dependencies": {
 		"@chris-talman/types-helpers": "1.0.0"
