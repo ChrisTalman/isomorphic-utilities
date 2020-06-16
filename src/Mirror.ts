@@ -15,7 +15,7 @@ export function mirror <GenericParameter extends MirrorObject | Array <GenericKe
 	{
 		for (let value of parameter)
 		{
-			mirror[value] = parameter[value];
+			mirror[value] = value;
 		};
 	}
 	else
