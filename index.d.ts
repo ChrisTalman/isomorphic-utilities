@@ -66,4 +66,7 @@ declare module '@chris-talman/isomorphic-utilities'
 
 	/** Generates random integer within range. */
 	export function getRangeRandomInteger(lower: number, upper: number): number;
+
+	/** Shuffles an array using swap algorithm. */
+	export function swapShuffle <GenericItem> (unshuffled: Array <GenericItem>): Array <GenericItem>;
 }

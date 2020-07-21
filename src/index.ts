@@ -13,3 +13,4 @@ export { camelToDash } from './CamelToDash';
 export { dashToCamel } from './DashToCamel';
 export { PromiseController } from './PromiseController';
 export { getRangeRandomInteger } from './RangeRandomInteger';
+export { swapShuffle } from './SwapShuffle';
