@@ -41,7 +41,7 @@ declare module '@chris-talman/isomorphic-utilities'
 		If promise resolves, returns resolved value.
 		If promise rejects, returns `undefined` and logs error.
 	*/
-	export function catchPromise <GenericResolution> (promise: Promise <GenericResolution>): Promise<GenericResolution>;
+	export function catchPromise <GenericResolution> (promise: Promise <GenericResolution>): Promise <GenericResolution | undefined>;
 
 	/** Returns size of Base64 string in given unit. */
 	export function base64Size({value, unit}: {value: string, unit: 'bytes' | 'kilobytes'}): number;

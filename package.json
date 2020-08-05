@@ -1,7 +1,7 @@
 {
 	"name": "@chris-talman/isomorphic-utilities",
 	"description": "Utility methods for any JavaScript environment, such as browser or Node.",
-	"version": "1.13.2",
+	"version": "1.13.3",
 	"scripts": {
 		"build": "./node_modules/.bin/webpack"
 	},
