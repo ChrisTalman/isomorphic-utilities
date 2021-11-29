@@ -3,7 +3,7 @@
 	"description": "Utility methods for any JavaScript environment, such as browser or Node.",
 	"version": "1.13.4",
 	"scripts": {
-		"build": "./node_modules/.bin/webpack"
+		"build": "webpack"
 	},
 	"devDependencies": {
 		"ts-loader": "5.3.3",
