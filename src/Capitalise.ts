@@ -7,7 +7,7 @@ export function capitalise(text: string)
 	const capitalisedWords: Array<string> = [];
 	for (let word of words)
 	{
-		const characters = (word[0] || '').split('');
+		const characters = (word || '').split('');
 		for (let characterIndex = 0; characterIndex < characters.length; characterIndex++)
 		{
 			characters[characterIndex] = characterIndex === 0 ? characters[characterIndex].toUpperCase() : characters[characterIndex].toLowerCase();
